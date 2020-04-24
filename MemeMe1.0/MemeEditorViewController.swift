@@ -153,15 +153,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: - Configuring UI
     
     func configureUI(_ enable: Bool) {
-        configure(textField: &topTextField, label: "TOP")
-        configure(textField: &bottomTextField, label: "BOTTOM")
+        configure(textField: &topTextField)
+        configure(textField: &bottomTextField)
         imagePickerView.image = nil
         shareButton.isEnabled = enable
     }
     
-    func configure(textField: inout UITextField, label name: String) {
+    func configure(textField: inout UITextField) {
         textField.defaultTextAttributes = memeTextAttribute
-        textField.text = name
         textField.delegate = textFieldMemeDelegate
         textField.textAlignment = .center
     }
