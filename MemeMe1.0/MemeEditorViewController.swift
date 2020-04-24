@@ -27,10 +27,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     // MARK: - Setting customs textfield attributes
     
     let memeTextAttribute: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.strokeColor: UIColor(named: "txtColor")!,
-        NSAttributedString.Key.foregroundColor: UIColor(named: "strokeColor")!,
-        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth: -5.0
+        .strokeColor: UIColor(named: "txtColor")!,
+        .foregroundColor: UIColor(named: "strokeColor")!,
+        .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        .strokeWidth: -4.0
     ]
     
     let textFieldMemeDelegate = TextFieldMemeDelegate()
@@ -146,7 +146,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         hiddenToolbarsFromView(false)
         return memedImage
     }
-    
+     
     func save() {
             // Create the meme
         let memeImaged = generateMemedImage()
