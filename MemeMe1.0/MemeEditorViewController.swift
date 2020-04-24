@@ -100,9 +100,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
-        if bottomTextField.isEditing {
-            view.frame.origin.y = 0
-        }
+        view.frame.origin.y = 0
     }
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
@@ -148,11 +146,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
      
     func save() {
-            // Create the meme
         let memeImaged = generateMemedImage()
         let _ = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: memeImaged)
-        
-        
     }
     
     // MARK: - Configuring UI
@@ -160,7 +155,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     func configureUI(_ enable: Bool) {
         configure(textField: &topTextField, label: "TOP")
         configure(textField: &bottomTextField, label: "BOTTOM")
-        
         imagePickerView.image = nil
         shareButton.isEnabled = enable
     }
