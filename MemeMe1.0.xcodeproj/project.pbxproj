@@ -15,6 +15,7 @@
 		348AC6A5244E468A0032F056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348AC6A3244E468A0032F056 /* Main.storyboard */; };
 		348AC6A7244E468F0032F056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348AC6A6244E468F0032F056 /* Assets.xcassets */; };
 		348AC6AA244E468F0032F056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 348AC6A8244E468F0032F056 /* LaunchScreen.storyboard */; };
+		34AFDD462458F26C006C7572 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AFDD452458F26C006C7572 /* MemeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		348AC6A6244E468F0032F056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		348AC6A9244E468F0032F056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		348AC6AB244E468F0032F056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34AFDD452458F26C006C7572 /* MemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				348AC69D244E468A0032F056 /* AppDelegate.swift */,
 				348AC69F244E468A0032F056 /* SceneDelegate.swift */,
+				34AFDD452458F26C006C7572 /* MemeTableViewController.swift */,
 				348AC6A1244E468A0032F056 /* MemeEditorViewController.swift */,
 				348AC6A3244E468A0032F056 /* Main.storyboard */,
 				348AC6A6244E468F0032F056 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				348AC6A2244E468A0032F056 /* MemeEditorViewController.swift in Sources */,
 				348AC69E244E468A0032F056 /* AppDelegate.swift in Sources */,
 				34456FE2244FEB8D00D82B8B /* TextFieldMemeDelegate.swift in Sources */,
+				34AFDD462458F26C006C7572 /* MemeTableViewController.swift in Sources */,
 				348AC6A0244E468A0032F056 /* SceneDelegate.swift in Sources */,
 				34456FE4244FEC3500D82B8B /* Meme.swift in Sources */,
 			);
