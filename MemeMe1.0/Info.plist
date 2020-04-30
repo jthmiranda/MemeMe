@@ -20,6 +20,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Please enabled photo library to select a picture</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please enabeld camera to start meme</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Please enabled photo library to save </string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -53,12 +59,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>Please enabeld camera to start meme</string>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>Please enabled photo library to select a picture</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Please enabled photo library to save </string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
