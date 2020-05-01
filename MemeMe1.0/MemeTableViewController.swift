@@ -16,6 +16,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .done, target: self, action: #selector(MemeTableViewController.showMemeEditor))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -30,5 +32,8 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
  
-
+    @objc func showMemeEditor() {
+        let memeEditorControler = self.storyboard?.instantiateViewController(identifier: "MemeEditor") as! MemeEditorViewController
+        present(memeEditorControler, animated: true)
+    }
 }
