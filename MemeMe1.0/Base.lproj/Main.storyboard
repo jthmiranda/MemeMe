@@ -159,31 +159,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oy5-qn-lfO">
-                            <size key="itemSize" width="128" height="130"/>
+                            <size key="itemSize" width="104" height="108"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionCell" id="hmO-Wj-blG" customClass="MemeCollectionViewCell" customModule="MemeMe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="104" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="130"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="104" height="108"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-Rg-Qre">
-                                            <rect key="frame" x="8" y="8" width="112" height="114"/>
+                                        <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3sR-Rg-Qre">
+                                            <rect key="frame" x="8" y="22" width="88" height="87.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="88" id="1eO-V7-j8I"/>
+                                                <constraint firstAttribute="height" constant="87.5" id="7gW-4A-JTT"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="3sR-Rg-Qre" firstAttribute="centerY" secondItem="hmO-Wj-blG" secondAttribute="centerY" id="2vm-t5-XlN"/>
-                                    <constraint firstItem="3sR-Rg-Qre" firstAttribute="centerX" secondItem="hmO-Wj-blG" secondAttribute="centerX" id="AIy-2y-NY1"/>
-                                    <constraint firstAttribute="bottom" secondItem="3sR-Rg-Qre" secondAttribute="bottom" constant="8" id="WGO-2S-uUT"/>
-                                    <constraint firstItem="3sR-Rg-Qre" firstAttribute="top" secondItem="hmO-Wj-blG" secondAttribute="top" constant="8" id="WLo-Vo-fz2"/>
-                                    <constraint firstAttribute="trailing" secondItem="3sR-Rg-Qre" secondAttribute="trailing" constant="8" id="iY9-pU-hAX"/>
+                                    <constraint firstItem="3sR-Rg-Qre" firstAttribute="top" secondItem="hmO-Wj-blG" secondAttribute="topMargin" constant="14" id="9d6-DG-NAd"/>
+                                    <constraint firstItem="3sR-Rg-Qre" firstAttribute="centerX" secondItem="hmO-Wj-blG" secondAttribute="centerX" id="faq-O0-3Vi"/>
                                 </constraints>
+                                <size key="customSize" width="104" height="108"/>
                                 <connections>
                                     <outlet property="memeImageView" destination="3sR-Rg-Qre" id="8vk-hd-apR"/>
                                 </connections>
@@ -196,6 +198,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="Oyn-h7-xKf"/>
                     <connections>
+                        <outlet property="flowLayout" destination="oy5-qn-lfO" id="U7E-l0-tNz"/>
                         <outlet property="memeCollectionView" destination="ywO-D9-pEI" id="H2O-Lr-G6C"/>
                     </connections>
                 </collectionViewController>
