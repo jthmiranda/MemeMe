@@ -22,6 +22,7 @@ class MemeCollectionCollectionViewController: UICollectionViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,8 +55,9 @@ class MemeCollectionCollectionViewController: UICollectionViewController {
     
         // Configure the cell
         let meme = memes[(indexPath as NSIndexPath).row]
-        cell.memeImageView.image = meme.memedImage
-    
+        cell.memeImageView.image = meme.originalImage
+        cell.topMemeText.text = meme.topText
+        cell.botomMemeText.text = meme.bottomText
         return cell
     }
 
