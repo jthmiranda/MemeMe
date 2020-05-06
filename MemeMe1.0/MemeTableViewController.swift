@@ -43,8 +43,13 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         cell.topText.text = meme.topText
         cell.bottonText.text = meme.bottomText
         
-        cell.topImageText.text = meme.topText
-        cell.botoonImageText.text = meme.bottomText
+        
+        cell.topImageText.attributedText = NSAttributedString(string: meme.topText, attributes: Meme.memeLabelAttribute)
+        cell.topImageText.textAlignment = .center
+        cell.topImageText.adjustsFontSizeToFitWidth = true
+        cell.botoonImageText.attributedText = NSAttributedString(string: meme.bottomText, attributes: Meme.memeLabelAttribute)
+        cell.botoonImageText.textAlignment = .center
+        cell.botoonImageText.adjustsFontSizeToFitWidth = true
         
         return cell
     }

@@ -26,7 +26,7 @@ class MemeCollectionCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let space: CGFloat = 3.0
+        let space: CGFloat = 2.0
         let dimension = (view.frame.size.width - (2  * space)) / 3.0
         
         flowLayout.minimumInteritemSpacing = space
@@ -56,8 +56,15 @@ class MemeCollectionCollectionViewController: UICollectionViewController {
         // Configure the cell
         let meme = memes[(indexPath as NSIndexPath).row]
         cell.memeImageView.image = meme.originalImage
-        cell.topMemeText.text = meme.topText
-        cell.botomMemeText.text = meme.bottomText
+        
+        cell.topMemeText.attributedText = NSAttributedString(string: meme.topText, attributes: Meme.memeLabelAttribute)
+        cell.topMemeText.textAlignment = .center
+        cell.topMemeText.adjustsFontSizeToFitWidth = true
+        
+        cell.botomMemeText.attributedText = NSAttributedString(string: meme.bottomText, attributes: Meme.memeLabelAttribute)
+        cell.botomMemeText.textAlignment = .center
+        cell.botomMemeText.adjustsFontSizeToFitWidth = true
+        
         return cell
     }
 
