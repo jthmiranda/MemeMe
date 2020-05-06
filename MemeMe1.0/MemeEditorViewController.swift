@@ -26,12 +26,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     // MARK: - Setting customs textfield attributes
     
-    let memeTextAttribute: [NSAttributedString.Key: Any] = [
-        .strokeColor: UIColor(named: "txtColor")!,
-        .foregroundColor: UIColor(named: "strokeColor")!,
-        .font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        .strokeWidth: -4.0
-    ]
+    
     
     let textFieldMemeDelegate = TextFieldMemeDelegate()
     
@@ -164,7 +159,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func configure(textField: inout UITextField) {
-        textField.defaultTextAttributes = memeTextAttribute
+        textField.defaultTextAttributes = Meme.memeTextAttribute
         textField.delegate = textFieldMemeDelegate
         textField.textAlignment = .center
     }
