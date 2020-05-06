@@ -151,7 +151,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S9N-t7-XtD"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2h8-Ha-H0t">
+                    <navigationItem key="navigationItem" title="Sent Meme" id="2h8-Ha-H0t">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="12X-y0-dkQ">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="mpQ-OI-QhM"/>
@@ -166,7 +166,7 @@
             </objects>
             <point key="canvasLocation" x="437.60000000000002" y="461.91904047976016"/>
         </scene>
-        <!--Meme Collection Collection View Controller-->
+        <!--Sent Meme-->
         <scene sceneID="eeK-eE-yJi">
             <objects>
                 <collectionViewController id="qZp-Ex-Ots" customClass="MemeCollectionCollectionViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -230,7 +230,7 @@
                             <outlet property="delegate" destination="qZp-Ex-Ots" id="mA2-dG-uII"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Oyn-h7-xKf"/>
+                    <navigationItem key="navigationItem" title="Sent Meme" id="Oyn-h7-xKf"/>
                     <connections>
                         <outlet property="flowLayout" destination="oy5-qn-lfO" id="U7E-l0-tNz"/>
                         <outlet property="memeCollectionView" destination="ywO-D9-pEI" id="H2O-Lr-G6C"/>
@@ -330,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="462"/>
+            <point key="canvasLocation" x="1534" y="62"/>
         </scene>
     </scenes>
     <resources>
