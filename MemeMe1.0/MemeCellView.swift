@@ -14,7 +14,6 @@ class MemeCellView: UITableViewCell {
     @IBOutlet weak var topText: UILabel!
     @IBOutlet weak var bottonText: UILabel!
     
-    
     @IBOutlet weak var topImageText: UILabel!
     @IBOutlet weak var botoonImageText: UILabel!
     
