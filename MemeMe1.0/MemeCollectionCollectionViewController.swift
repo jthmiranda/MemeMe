@@ -21,8 +21,7 @@ class MemeCollectionCollectionViewController: UICollectionViewController {
     @IBOutlet var memeCollectionView: UICollectionView!
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,17 +35,13 @@ class MemeCollectionCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
         memeCollectionView.reloadData()
     }
 
-
-
     // MARK: UICollectionViewDataSource
-
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return memes.count
     }
 
@@ -67,17 +62,4 @@ class MemeCollectionCollectionViewController: UICollectionViewController {
         
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-  
-
 }
