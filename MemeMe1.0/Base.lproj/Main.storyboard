@@ -341,15 +341,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IaJ-Wb-9ep">
-                                <rect key="frame" x="23" y="64" width="326" height="544"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IaJ-Wb-9ep">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="IaJ-Wb-9ep" firstAttribute="leading" secondItem="Kig-Ll-Kw4" secondAttribute="leading" id="JJ1-rq-9e8"/>
+                            <constraint firstItem="Kig-Ll-Kw4" firstAttribute="bottom" secondItem="IaJ-Wb-9ep" secondAttribute="bottom" id="JqL-1d-sHy"/>
+                            <constraint firstItem="IaJ-Wb-9ep" firstAttribute="top" secondItem="Kig-Ll-Kw4" secondAttribute="top" id="cWB-pc-0nT"/>
+                            <constraint firstItem="Kig-Ll-Kw4" firstAttribute="trailing" secondItem="IaJ-Wb-9ep" secondAttribute="trailing" id="h89-SR-1U6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kig-Ll-Kw4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Meme Detail" id="TIv-jH-TF8"/>
+                    <connections>
+                        <outlet property="imageDetail" destination="IaJ-Wb-9ep" id="XBJ-a4-cZe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzR-o3-NtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

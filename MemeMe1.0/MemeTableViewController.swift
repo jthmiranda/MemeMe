@@ -19,14 +19,9 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         return object.memes
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .done, target: self, action: #selector(MemeTableViewController.showMemeEditor))
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = false
         self.memeTableView.reloadData()
     }
     
@@ -43,19 +38,27 @@ class MemeTableViewController: UIViewController, UITableViewDataSource, UITableV
         cell.topText.text = meme.topText
         cell.bottonText.text = meme.bottomText
         
-        
         cell.topImageText.attributedText = NSAttributedString(string: meme.topText, attributes: Meme.memeLabelAttribute)
-        cell.topImageText.textAlignment = .center
-        cell.topImageText.adjustsFontSizeToFitWidth = true
+//        cell.topImageText.textAlignment = .center
+//        cell.topImageText.adjustsFontSizeToFitWidth = true
         cell.botoonImageText.attributedText = NSAttributedString(string: meme.bottomText, attributes: Meme.memeLabelAttribute)
-        cell.botoonImageText.textAlignment = .center
-        cell.botoonImageText.adjustsFontSizeToFitWidth = true
+//        cell.botoonImageText.textAlignment = .center
+//        cell.botoonImageText.adjustsFontSizeToFitWidth = true
         
         return cell
     }
- 
-//    @objc func showMemeEditor() {
-//        let memeEditorControler = self.storyboard?.instantiateViewController(identifier: "MemeEditor") as! MemeEditorViewController
-//        present(memeEditorControler, animated: true)
-//    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "MemeDetailSegue", sender: indexPath)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MemeDetailSegue" {
+            let detailView = segue.destination as! MemeDetailViewController
+            let row = (sender as! NSIndexPath).row
+            let meme = self.memes[row]
+            detailView.image = meme.memedImage
+            
+        }
+    }
 }
